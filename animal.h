@@ -12,6 +12,9 @@ class Animal {
 
     public:
         Animal() {};
+        // Abstract function implemented by derived classes
+        virtual void printAnimalInfo(Animal *a) = 0;
+
      
 };
 #endif
