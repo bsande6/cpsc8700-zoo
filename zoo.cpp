@@ -1,4 +1,5 @@
 #include <string.h>
+#include <time.h>
 
 #include "zoo.h"
 
@@ -9,6 +10,7 @@ void Zoo::addAnimals(string animal, int val) {
         copy(animal.begin(), animal.end(), writable);
         writable[animal.size()] = '\0'; 
         if (strcmp(writable, "lemur")==0) {
+            // could put a check here to ensure that the the number of lemurs is less than the amount of lemur names available
             for (int i=0; i < val; i++) {
                 instance->animals.push_back(Lemur());
             }
@@ -17,10 +19,11 @@ void Zoo::addAnimals(string animal, int val) {
 
 
 int main(int argc, char *argv[]) {
+    srand(time(NULL));
     Zoo *z = z->getInstance();
 
     ifstream inFile;
-    
+    // Need to change this to use input redirection
     inFile.open("input.txt");
    
     if (!inFile) {

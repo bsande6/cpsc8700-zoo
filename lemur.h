@@ -12,12 +12,23 @@ class Lemur: public Animal {
    private:
     // do we provide random name or is this from input?
     string name;
+
+    static int counter;
       
 
     public:
-        Lemur() {this->name="Jeff";}
-        Lemur(string name) {this->name=name;}
-        printInfo()
+        Lemur() {
+            cout << this->getName() << endl;
+            this->name=this->getName();
+            this->counter++;}
+        Lemur(string name) {this->name=name; 
+            this->counter++;
+        }
+        ~Lemur() {this->counter--;}
+        //void printAnimalInfo(Animal *animal) {cout << "info" << endl;}
     
 };
+
+int Lemur::counter = 0;
+
 #endif
