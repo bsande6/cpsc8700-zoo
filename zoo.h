@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "lemur.h"
+#include "abstract_factory.cpp"
 
 using namespace std;
 
@@ -21,14 +21,15 @@ class Zoo {
         Zoo(string name) {this->name=name;}
 
     public:
-        // can be named anything, but recommended to have word Instance in the name
-
         static Zoo* getInstance() {
 
             if (!instance) instance = new Zoo;
             return instance;
 
         }
+        // Lemur createLemur() { // Factory method.
+        //     return new Lemur();
+        // }
         void addAnimals(string animal, int val);
 
         int getTotalAnimals();

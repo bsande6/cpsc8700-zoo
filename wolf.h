@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Wolf {
+class Wolf: public Animal {
 
    private:
     string name;

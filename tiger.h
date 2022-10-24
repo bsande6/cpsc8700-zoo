@@ -5,17 +5,15 @@
 
 using namespace std;
 
-class Tiger {
+class Tiger: public Animal {
 
    private:
     string name;
-    private static int counter;
-
-      
+    static int counter;
 
     public:
         Tiger();
-        Tiger(string name) {this->name=name; counter++}
+        Tiger(string name) {this->name=name; counter++;}
         
     
 };

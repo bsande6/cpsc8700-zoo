@@ -9,7 +9,7 @@ class Animal {
 
     private:
         const string animals[10] = {"Jerry", "Beth", "Rick", "Morty", "Summer", "Jeff", "Joe", "Bob", "Ava", "Sean"};
-        vector<Lemur> lemurs;
+        //vector<Lemur> lemurs;
 
 
     public:
