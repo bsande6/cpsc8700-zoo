@@ -13,7 +13,11 @@ class Serpent: public Animal {
       
 
     public:
-        Serpent();
+        Serpent() : Animal() {};
+
+        void printMsg() {
+            cout << "My name is " << this->getName() << ", I am a kangaroo, I hop around and have a pouch.";
+        }
     
 };
 #endif

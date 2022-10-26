@@ -13,12 +13,13 @@ using namespace std;
 class AbstractFactory {
    public:
       // i think this shared_ptr typing is causing errors
-      virtual shared_ptr<Animal> createAnimal(char*animalType) const = 0;
+      virtual Animal* createAnimal(char*animalType) const = 0;
 };
 
 class AnimalFactory: public AbstractFactory {
    public:
-      Animal *createAnimal(char* animalType){
+      Animal *createAnimal(char* animalType) const {
+
          if (strcmp(animalType, "lemur")==0) {
             return new Lemur();
          }
@@ -34,5 +35,6 @@ class AnimalFactory: public AbstractFactory {
          else if (strcmp(animalType, "wolf")==0) {
             return new Wolf();
          }
+
       }
 };

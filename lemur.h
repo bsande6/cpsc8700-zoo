@@ -10,22 +10,24 @@ using namespace std;
 class Lemur: public Animal {
 
    private:
-    // do we provide random name or is this from input?
-    string name;
 
     static int counter;
       
 
     public:
-        Lemur() {
-            cout << this->getName() << endl;
-            this->name=this->getName();
-            this->counter++;}
-        Lemur(string name) {this->name=name; 
+        Lemur() : Animal() {
+            this->counter++;
+        }
+
+        Lemur(string name) : Animal(name) {
             this->counter++;
         }
         ~Lemur() {this->counter--;}
         //void printAnimalInfo(Animal *animal) {cout << "info" << endl;}
+
+        void printMsg() {
+            cout << "My name is " << this->getName() << ", I am a Lemur, I make Lemur noises and enjoy causing trouble.\n";
+        }
     
 };
 

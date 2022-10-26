@@ -14,7 +14,7 @@ class Zoo {
 
         static Zoo* instance;
         string name;
-        vector<Animal> animals;
+        vector<Animal*> animals;
 
         // Private constructor so that no objects can be created.
         Zoo() {}
@@ -31,6 +31,8 @@ class Zoo {
         //     return new Lemur();
         // }
         void addAnimals(string animal, int val);
+
+        void printAnimals();
 
         int getTotalAnimals();
 };
