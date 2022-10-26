@@ -29,6 +29,12 @@ class Lemur: public Animal {
             cout << "My name is " << this->getName() << ", I am a Lemur, I make Lemur noises and enjoy causing trouble.\n";
         }
 
+        Lemur* clone() {
+
+            return new Lemur();
+
+        }
+
         static int getCount() { return counter; }
     
 };

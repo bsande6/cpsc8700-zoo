@@ -2,11 +2,14 @@
 #include <time.h>
 
 #include "zoo.h"
-#include "animal.cpp"
+#include "animal.h"
 
 Zoo *Zoo::instance = 0;
 
 void Zoo::addAnimals(string animal, int val) {
+
+    Animal::initNameList();
+    
     shared_ptr<AnimalFactory> factory = make_shared<AnimalFactory>();
     char * writable = new char[animal.size() + 1];
     copy(animal.begin(), animal.end(), writable);
@@ -38,7 +41,7 @@ void Zoo::printAnimals() {
     cout << "There are a total of " << Tiger::getCount() << " tigers, " <<
         Wolf::getCount() << " wolves, " << Kangaroo::getCount() << " Kangaroo, " << Lemur::getCount() << " Lemurs, and "
         << Serpent::getCount() << " Serpents.\n";
-        
+
     // print animal messages
     for( int i = 0; i < (int)instance->animals.size(); i++ ) {
         instance->animals[i]->printMsg();

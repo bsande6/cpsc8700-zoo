@@ -18,6 +18,10 @@ class Kangaroo: public Animal {
         }
     
         static int getCount() { return counter; }
+
+        Kangaroo* clone() {
+            return new Kangaroo();
+        }
 };
 
 int Kangaroo::counter = 0;

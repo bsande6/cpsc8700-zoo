@@ -20,6 +20,10 @@ class Serpent: public Animal {
     
         static int getCount() { return counter; }
 
+        Serpent* clone() {
+            return new Serpent();
+        }
+
 };
 
 int Serpent::counter = 0;

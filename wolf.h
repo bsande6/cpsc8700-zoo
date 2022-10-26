@@ -21,6 +21,10 @@ class Wolf: public Animal {
 
         static int getCount() { return counter; }
 
+        Wolf* clone() {
+            return new Wolf();
+        }
+
 };
 
 int Wolf::counter = 0;

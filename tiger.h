@@ -19,6 +19,10 @@ class Tiger: public Animal {
         }
         
         static int getCount() { return counter; }
+
+        Tiger* clone() {
+            return new Tiger();
+        }
     
 };
 
