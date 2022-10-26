@@ -12,9 +12,13 @@ void Zoo::addAnimals(string animal, int val) {
     copy(animal.begin(), animal.end(), writable);
     writable[animal.size()] = '\0';
 
-    Animal* new_animal = factory->createAnimal(writable);
+    for( int i = 0; i < val; i++ ) {
+        instance->animals.push_back(factory->createAnimal(writable));
+    }
+
+    // Animal* new_animal = factory->createAnimal(writable);
     
-    instance->animals.push_back(new_animal);
+    // instance->animals.push_back(new_animal);
 
     // if (strcmp(writable, "lemur")==0) {
     //     // could put a check here to ensure that the the number of lemurs is less than the amount of lemur names available
@@ -25,8 +29,18 @@ void Zoo::addAnimals(string animal, int val) {
 }
 
 void Zoo::printAnimals() {
+    cout << "Zoo ""Wild Things"" has the following animals: \n"
+        <<  "---------------------------------------------\n";
 
-    for( int i = 0; i < instance->animals.size(); i++ ) {
+    //print counts of animals
+    cout << "There are a total of " << instance->animals.size() << " in the zoo.\n";
+
+    cout << "There are a total of " << Tiger::getCount() << " tigers, " <<
+        Wolf::getCount() << " wolves, " << Kangaroo::getCount() << " Kangaroo, " << Lemur::getCount() << " Lemurs, and "
+        << Serpent::getCount() << " Serpents.\n";
+        
+    // print animal messages
+    for( int i = 0; i < (int)instance->animals.size(); i++ ) {
         instance->animals[i]->printMsg();
     }
 

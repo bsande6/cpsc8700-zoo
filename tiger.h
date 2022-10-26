@@ -15,9 +15,10 @@ class Tiger: public Animal {
         Tiger(string name) : Animal(name) { counter++; }
 
         void printMsg() {
-            cout << "My name is " << this->getName() << ", I am a kangaroo, I hop around and have a pouch.";
+            cout << "My name is " << this->getName() << ", I am a tiger. I eat other animals with my sharp teeth and can roar loudly.\n";
         }
         
+        static int getCount() { return counter; }
     
 };
 

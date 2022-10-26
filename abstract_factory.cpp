@@ -35,6 +35,7 @@ class AnimalFactory: public AbstractFactory {
          else if (strcmp(animalType, "wolf")==0) {
             return new Wolf();
          }
+         else { return nullptr; } //shouldn't ever get this case
 
       }
 };

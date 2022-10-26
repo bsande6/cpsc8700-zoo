@@ -8,16 +8,20 @@ using namespace std;
 class Serpent: public Animal {
 
    private:
-    string name;
-
-      
+    static int counter;
 
     public:
-        Serpent() : Animal() {};
+        Serpent() : Animal() {counter++;}
+        Serpent(string name) : Animal(name) {counter++;}
 
         void printMsg() {
-            cout << "My name is " << this->getName() << ", I am a kangaroo, I hop around and have a pouch.";
+            cout << "My name is " << this->getName() << ", I am a serpent. I slither around on my belly and eat rodents.\n";
         }
     
+        static int getCount() { return counter; }
+
 };
+
+int Serpent::counter = 0;
+
 #endif

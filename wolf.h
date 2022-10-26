@@ -8,15 +8,21 @@ using namespace std;
 class Wolf: public Animal {
 
    private:
-
+    static int counter;
       
 
     public:
-        Wolf() : Animal() {};
+        Wolf() : Animal() {counter++;};
+        Wolf(string name) : Animal(name) {counter++;}
     
         void printMsg() {
-            cout << "My name is " << this->getName() << ", I am a kangaroo, I hop around and have a pouch.";
+            cout << "My name is " << this->getName() << ", I am a wolf. I eat small animals and travel in packs. I can howl.\n";
         }
 
+        static int getCount() { return counter; }
+
 };
+
+int Wolf::counter = 0;
+
 #endif

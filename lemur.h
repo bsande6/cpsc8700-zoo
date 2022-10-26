@@ -28,6 +28,8 @@ class Lemur: public Animal {
         void printMsg() {
             cout << "My name is " << this->getName() << ", I am a Lemur, I make Lemur noises and enjoy causing trouble.\n";
         }
+
+        static int getCount() { return counter; }
     
 };
 
