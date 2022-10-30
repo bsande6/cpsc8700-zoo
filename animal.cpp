@@ -46,10 +46,6 @@ Animal::Animal() {
 
     }
 
-
-    //this->name = n;
-
-
 }
 
 const string Animal::animals[20] = {"Jerry", "Beth", "Rick", "Morty", "Summer", "Jeff", "Joe", "Bob", "Ava", "Sean", 

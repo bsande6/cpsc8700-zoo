@@ -23,8 +23,7 @@ class Lemur: public Animal {
             this->counter++;
         }
         ~Lemur() {this->counter--;}
-        //void printAnimalInfo(Animal *animal) {cout << "info" << endl;}
-
+        
         void printMsg() {
             cout << "My name is " << this->getName() << ", I am a Lemur, I make Lemur noises and enjoy causing trouble.\n";
         }

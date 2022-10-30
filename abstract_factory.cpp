@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <memory>
-// not sure where to include these (maybe zoo.h instead)
+
 #include "lemur.h"
 #include "kangaroo.h"
 #include "tiger.h"
@@ -12,7 +12,6 @@ using namespace std;
 
 class AbstractFactory {
    public:
-      // i think this shared_ptr typing is causing errors
       virtual Animal* createAnimal(char*animalType) const = 0;
 };
 

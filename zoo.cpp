@@ -19,16 +19,6 @@ void Zoo::addAnimals(string animal, int val) {
         instance->animals.push_back(factory->createAnimal(writable));
     }
 
-    // Animal* new_animal = factory->createAnimal(writable);
-    
-    // instance->animals.push_back(new_animal);
-
-    // if (strcmp(writable, "lemur")==0) {
-    //     // could put a check here to ensure that the the number of lemurs is less than the amount of lemur names available
-    //     for (int i=0; i < val; i++) {
-    //         instance->animals.push_back(Lemur());
-    //     }
-    // }
 }
 
 void Zoo::printAnimals() {
