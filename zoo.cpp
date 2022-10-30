@@ -41,25 +41,18 @@ void Zoo::printAnimals() {
 
 
 int main(int argc, char *argv[]) {
+    
     srand(time(NULL));
     Zoo *z = z->getInstance();
 
-    ifstream inFile;
-    // Need to change this to use input redirection
-    inFile.open("input.txt");
-   
-    if (!inFile) {
-        cerr << "Unable to open file" << endl;
-        exit(1);  
-    }
     string animal;
     int val=0;
-    while (inFile >> animal) {
-        inFile >> val;
-        z->addAnimals(animal, val);
-        // consider function to convert animal string to lowercase
-        
 
+    while (cin >> animal) {
+
+        cin >> val;
+        z->addAnimals(animal, val);
+        
     }
 
     z->printAnimals();
